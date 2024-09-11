@@ -37,3 +37,15 @@ kdist=mdist*1.60935
 print("CCC is",round(kdist,1),"kilometres from Singapore")
 helicost=kdist*900
 print("The cost to take a helicopter to Singapore, at €900 per kilometre, is",round(helicost,2),"euro")
+
+print("Task-6:\n")
+height=float(input("What is the cylinder's height? :"))
+radius=(float(input("What is the cylinder's width? :"))/2)
+volume=3.14*height*radius
+print("The cylinder's volume is",volume)
+totalLiquid=float(input("What is the volume of liquid to be stored? :"))
+if (totalLiquid%volume)==0:
+    cylinderNumber=totalLiquid//volume
+else:
+    cylinderNumber=(totalLiquid//volume)+1
+print("You will need",int(cylinderNumber),"cylinders")
