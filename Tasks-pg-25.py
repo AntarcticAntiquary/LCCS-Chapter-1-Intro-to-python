@@ -11,6 +11,50 @@ greatMusician=input('What is your favourite music artist? :')
 descriptor='talented'
 print(greatMusician+' is very '+descriptor+'!')
 
+# Task 2
+print('Task 2:\n')
+fullName=input('Please enter your full name :')
+space=fullName.index(' ') # The place separating first and second name
+firstName=fullName[:space] # Everything up to the space
+surName=fullName[(space+1):] # Everything after the space
+print('Your first name is',firstName+'.')
+print('Your surname is',surName+'.')
+print('\n')
+
+# Task 3
+print('Task 3:\n')
+time=input('Enter a time, in the format hours:minutes:seconds :')
+hrseparator=time.index(':') # Finds the first colon
+hrs=int(time[:hrseparator]) # Finds everything before the first colon (the hours)
+time=time[(hrseparator+1):] # Gets rid of everything from the first colon and behind, so we can find the second colon
+minseparator=time.index(':') # Finds the second colon
+mins=int(time[:minseparator]) # Finds everything before the second colon (the minutes)
+secs=int(time[(minseparator+1):]) # Finds everything after the second colon
+totalTime=(((hrs*60)+mins)*60)+secs # Puts it all together
+print(time,'in seconds is',str(TotalTime)+'.')
+print('\n')
+
+# Task 4
+print('Task 4:\n')
+s=int(input('Enter another amount of seconds :'))
+s2=s/60
+print(s,'seconds is',int(round(s2,0)),'minutes, rounded.')
+print('\n')
+
+# Task 5
+print('Task 5:\n')
+for uzbekistan in range(1,6): # Loops 5 times, overwriting a each time
+    a=input('Input a character to convert to ASCII :')
+    print('The ASCII of',a,'is',str(ord(a))+'.')
+print('\n')
+
+# Task 6
+print('Task 6\n')
+use=int(input('Please enter the units of electricity used last month :'))
+charge=26.2+(use*0.19)
+print('The electricity charge is €'+str(round(charge,2))+'.')
+print('\n')
+
 print('Task-7:\n')
 fish=int(input('Please enter the number of required orders of fish :'))
 chips=int(input('Please enter the number of required orders of chips :'))
