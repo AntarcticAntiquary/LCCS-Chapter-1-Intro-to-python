@@ -115,6 +115,25 @@ def task7():
     print("My database for "+userName+"\n"+str(userList))
     print('\n')
 
+def task8():
+    pangram=['the','five','boxing','wizards','jump','quickly']
+    lword=pangram.pop()
+    pword=pangram.pop()
+    pangram.append(lword)
+    pangram.append(pword)
+    for looper in range(len(pangram)):
+        print(pangram[looper],end=' ')
+        
+def task9():
+    import random as r
+    fruitFile=open('fruits.txt')
+    fileContents=fruitFile.read()
+    fruitFile.close()
+    fruits=fileContents.split()
+    print(r.choice(fruits))
+    print(r.choice(fruits))
+    print(r.choice(fruits))
+
 task1()
 task2()
 task3()
@@ -122,3 +141,5 @@ task4()
 task5()
 task6()
 task7()
+task8()
+task9()
