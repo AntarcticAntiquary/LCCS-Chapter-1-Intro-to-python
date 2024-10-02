@@ -1,0 +1,20 @@
+"""
+True and False -> False (Nothing can be true and false)
+not True or False -> False (not True==False)
+True and not True -> False (Nothing can be true and false)
+not True or not False -> False or True
+not True and not False -> False (Nothing can be true and false)
+"""
+
+# Task 3
+import random as r
+number=r.randint(1,10)
+guess=int(input('Enter a number between 1 and 10 :'))
+if guess==number:
+    print('Your guess was correct')
+    print('Well done!')
+elif guess>10 or guess<1:
+    print('I said between 1 and 10...')
+else:
+    print('You were incorrect')
+print('Goodbye')
