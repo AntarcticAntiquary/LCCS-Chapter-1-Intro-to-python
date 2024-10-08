@@ -39,15 +39,15 @@ print('\n')
 # Task 4
 print('Task-4:')
 print('Partcipate in this competition to win COMPLETELY FREE Luas tickets!')
-letter=input('Enter A, B or C :')
-if letter=='A' or letter=='a':
+letter=input('Enter A, B or C :') # get input
+if letter=='A' or letter=='a': # upper or lower case
     print('You get a COMPLETELY FREE ticket to Dundrum Shopping Centre!')
 elif letter=='B' or letter=='b':
     print('You get a COMPLETELY FREE ticket to Tallaght!')
 elif letter=='C' or letter=='c':
     print('You get a COMPLETELY FREE ticket to Broombridge!')
 else:
-    print('You uncooperative person. You get no COMPLETELY FREE ticket')
+    print('You uncooperative person. You get no COMPLETELY FREE ticket') # invalid input
 print('\n')
 
 # Task 5
