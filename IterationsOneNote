@@ -1,0 +1,100 @@
+# Author='Daniel Lewis'
+# Telos=Homework
+# Identifier=OneNote Tasks
+# Topic='Iterations'
+# Date=07-10-2024
+
+import random as r
+
+# Task 1
+print('Task-1:')
+# Simple while loop
+# Initialise a loop counter
+counter=1
+# Loop 10 times
+while counter<=10:
+    print('Hello World!') # Display a message
+    counter+=1 # Increment the counter
+# this line only executed once
+print('Goodbye\n')
+
+# Task 3
+print('Task-3:')
+number=r.randint(1,10) # Set random number
+#print(number) # Sneak peek
+counter=0
+while counter<3:
+    guess=int(input('Enter a number between 1 and 10 :'))
+    if guess==number:
+        print('Correct!')
+        break # Exit loop
+    elif guess<number:
+        print('Too low')
+    else:
+        print('Too high')
+    counter+=1
+print('Goodbye\n')
+
+# Task 5
+print('Task-5:')
+number=r.randint(1,10) # Set random number
+#print(number) # Sneak peek
+correct=False # Initialise guard variable
+while not correct: 
+    guess=int(input('Enter a number between 1 and 10 :'))
+    if guess==number:
+        print('Correct!')
+        correct=True # This will cause the loop to exit
+    elif guess<number:
+        print('Too low')
+    else:
+        print('Too high')
+    counter+=1
+print('Goodbye\n')
+
+# Task 7
+print('Task-7:')
+number=r.randint(1,10) # Set random number
+#print(number) # Sneak peek
+keepGoing=True # Initialise guard variable
+while keepGoing: 
+    guess=int(input('Enter a number between 1 and 10 :'))
+    if guess==number:
+        print('Correct!')
+        goAgain=input('Play again? (Y/N) :') # Ask if they wish to repeat
+        if goAgain=='N':
+            keepGoing=False # This will exit the loop
+        else:
+            number=r.randint(1,10) # Generate a new number
+            #print(number) #Sneak peek
+    elif guess<number:
+        print('Too low')
+    else:
+        print('Too high')
+    counter+=1
+print('Goodbye\n')
+
+# Task 8
+print('Task-8:')
+number=r.randint(1,10) # Set random number
+#print(number) # Sneak peek
+keepGoing=True # Initialise guard variable
+while keepGoing: 
+    guess=input('Enter a number between 1 and 10 :')
+    while not guess.isdigit(): # Check if guess is a number
+        guess=input('Enter a number between 1 and 10 :') # If  not, enter another guess
+    guess=int(guess) # Convert a string to an integer (We didn't do this before to avoid error messages)
+    if guess==number:
+        print('Correct!')
+        goAgain=input('Play again? (Y/N) :') # Ask if they wish to repeat
+        if goAgain=='N':
+            keepGoing=False # This will exit the loop
+        else:
+            number=r.randint(1,10) # Generate a new number
+            #print(number) #Sneak peek
+    elif guess<number:
+        print('Too low')
+    else:
+        print('Too high')
+    counter+=1
+print('Goodbye\n')
