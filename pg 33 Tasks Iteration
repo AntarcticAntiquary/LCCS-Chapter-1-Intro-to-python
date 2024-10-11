@@ -1,0 +1,45 @@
+# Author='Daniel Lewis'
+# Telos=Homework
+# Identifier='Pg 
+# Topic='Iterations' 
+# Date=11-10-2024
+
+# Task-1:
+print('Task-1:')
+counter=1000 # Set up variables
+total=0
+while counter<=1501: # while loop increments total and counter
+    total+=counter
+    counter+=1
+print(total) # Print the total
+print('\n')
+
+# Task-2:
+print('Task-2:')
+counter=0
+total=0
+while counter<6:
+    num=int(input('Enter a number :'))
+    total+=num
+    counter+=1
+print('The average is',round(total/6,2))
+print('\n')
+
+# Task-3:
+print('Task-3:')
+sentry=False
+while sentry==False:
+    name=input('Please enter your name :\n')
+    if name=='Maureen':
+        password=input('Please enter your password :\n')
+        if password=='LCCS':
+            print('Welcome Maureen!')
+            sentry=True
+    if sentry==False:
+        print('Access denied')
+        retry=input('Retry, Y/N :')
+        if retry=='N':
+            sentry=True
+print('\n')
+
+# Task-4:
