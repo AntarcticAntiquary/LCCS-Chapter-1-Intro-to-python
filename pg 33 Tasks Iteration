@@ -1,108 +1,125 @@
 # Author='Daniel Lewis'
 # Telos=Homework
-# Identifier='Pg 
+# Identifier='Pg 33 Tasks'
 # Topic='Iterations' 
 # Date=11-10-2024
 
 # Task-1:
-print('Task-1:')
-counter=1000 # Set up variables
-total=0
-while counter<=1501: # while loop increments total and counter
-    total+=counter
-    counter+=1
-print(total) # Print the total
-print('\n')
+def Task1():
+    print('Task-1:')
+    print('Adding up all the numbers between 1000 and 1500...')
+    counter=1000 # Set up variables
+    total=0
+    while counter<=1501: # while loop increments total and counter
+        total+=counter
+        counter+=1
+    print(total) # Print the total
+    print('\n')
 
 # Task-2:
-print('Task-2:')
-counter=0
-total=0 # Set up variables
-while counter<6:
-    num=int(input('Enter a number :')) # Get number from user
-    total+=num # Adds the number to total
-    counter+=1 # Increment counter
-print('The average is',round(total/6,2)) # Find average
-print('\n')
+def Task2():
+    print('Task-2:')
+    print('An averaging program')
+    counter=0
+    total=0 # Set up variables
+    while counter<6:
+        num=int(input('Enter a number :')) # Get number from user
+        total+=num # Adds the number to total
+        counter+=1 # Increment counter
+    print('The average is',round(total/6,2)) # Find average
+    print('\n')
 
 # Task-3:
-print('Task-3:')
-sentry=False # Loopguard
-while sentry==False:
-    name=input('Please enter your name :\n')
-    if name=='Maureen':
-        password=input('Please enter your password :\n')
-        if password=='LCCS':
-            print('Welcome Maureen!') # Let in to site if both correct
-            sentry=True # Stop looping
-    if sentry==False:
-        print('Access denied')
-        retry=input('Retry, Y/N :')
-        if retry=='N':
-            sentry=True #Stop looping if N, if Y, repeat
-print('\n')
+def Task3():
+    print('Task-3:')
+    print('Security clearance required: Please follow instructions below')
+    sentry=False # Loopguard
+    while sentry==False:
+        name=input('Please enter your name :\n')
+        if name=='Maureen':
+            password=input('Please enter your password :\n')
+            if password=='LCCS':
+                print('Welcome Maureen!') # Let in to site if both correct
+                sentry=True # Stop looping
+        if sentry==False:
+            print('Access denied')
+            retry=input('Retry, Y/N :')
+            if retry=='N':
+                sentry=True #Stop looping if N, if Y, repeat
+    print('\n')
 
 # Task-4:
-print('Task-4:')
-limit=int(input('Enter a limit number :'))
-counter=1
-oddTotal=0
-evenTotal=0 # Initialise variables
-while counter<=limit: # Odd loop: adds all the odd numbers up to the limit
-    oddTotal+=counter
-    counter+=2 
-counter=2
-while counter<=limit: # Even loop: adds all the even numbers up to the limit
-    evenTotal+=counter
-    counter+=2
-print('The total of the odd numbers is',str(oddTotal)+',','and the total for the even numbers is',evenTotal)
-print('\n')
+def Task4():
+    print('Task-4:')
+    print('A program to add numbers up to a limit')
+    limit=int(input('Enter a limit number :'))
+    counter=1
+    oddTotal=0
+    evenTotal=0 # Initialise variables
+    while counter<=limit: # Odd loop: adds all the odd numbers up to the limit
+        oddTotal+=counter
+        counter+=2 
+    counter=2
+    while counter<=limit: # Even loop: adds all the even numbers up to the limit
+        evenTotal+=counter
+        counter+=2
+    print('The total of the odd numbers is',str(oddTotal)+',','and the total for the even numbers is',evenTotal)
+    print('\n')
 
 # Task-5:
-print('Task-5:')
-print('A program to determine averages')
-print('Enter numbers to average') # Instruct the user
-print('When finished entering numbers, enter 0 to calculate the average')
-loopGuard=True
-num=1.0
-total=0
-numAmount=0 # Initialise variables
-while loopGuard:
-    num=round(float(input('Enter a number :')),2) # Number will be rounded to 2 decimal places
-    if num>0:
-        total+=num # Totals all the numbers
-        numAmount+=1 # Keeps track of how many numbers inputted
-    else:
-        loopGuard=False # breaks loop if number is 0 or less
-print('The average is',round(total/numAmount,2)) # Find average - divide total by the amount of numbers
-print('\n')
+def Task5():
+    print('Task-5:')
+    print('A program to determine averages')
+    print('Enter numbers to average') # Instruct the user
+    print('When finished entering numbers, enter 0 to calculate the average')
+    loopGuard=True
+    num=1.0
+    total=0
+    numAmount=0 # Initialise variables
+    while loopGuard:
+        num=round(float(input('Enter a number :')),2) # Number will be rounded to 2 decimal places
+        if num>0:
+            total+=num # Totals all the numbers
+            numAmount+=1 # Keeps track of how many numbers inputted
+        else:
+            loopGuard=False # breaks loop if number is 0 or less
+    print('The average is',round(total/numAmount,2)) # Find average - divide total by the amount of numbers
+    print('\n')
 
 # Task-6:
-print('Task-6:')
-statement=list(str(input('Enter a multi-word text :'))) # Get text, make sure it is string, then convert it to list
-spaceCount=statement.count(' ') # Counts spaces
-print('There are',spaceCount,'spaces')
-wordCount=spaceCount+1 # Counts words
-print('There are',wordCount,'words')
-print('\n')
+def Task6():
+    print('Task-6:')
+    print('A program to count words in a sentence')
+    statement=list(str(input('Enter a sentence :'))) # Get text, make sure it is string, then convert it to list
+    spaceNum=0
+    for j in range(len(statement)):
+        if statement[j]==' ':
+            spaceNum+=1
+#   spaceNum=statement.count(' ') # Counts spaces
+    print('There are',spaceNum,'spaces')
+    wordNum=spaceNum+1 # Counts words
+    print('There are',wordNum,'words')
+    print('\n')
 
 # Task-7:
-print('Task-7:')
-print('*********************************')
-print('*\tQuilts Inc. Menu\t*')
-print('*\t1. Curtains\t\t*')
-print('*\t2. Cushions\t\t*')
-print('*\t3. Quilts\t\t*')
-print('*********************************')
-print('*\t4. Exit\t\t\t*')
-print('*********************************') # Print menu
-choice=int(input('Enter your option number :')) # Get choice
-print('\n')
-if choice==1:
-    print('Loading curtains menu. Please wait...')
-elif choice==2:
-    print('Loading cushion covers menu. Please wait...')
-elif choice==3:
-    print('Loading quilts menu. Please wait...')
-elif choice==4:
-    print('Goodbye') # Display relevant messages depending on choice
+def Task7():
+    print('Task-7:')
+    print('*********************************')
+    print('*\tQuilts Inc. Menu\t*')
+    print('*\t1. Curtains\t\t*')
+    print('*\t2. Cushions\t\t*')
+    print('*\t3. Quilts\t\t*')
+    print('*********************************')
+    print('*\t4. Exit\t\t\t*')
+    print('*********************************') # Print menu
+    choice=int(input('Enter your option number :')) # Get choice
+    print('\n')
+    if choice==1:
+        print('Loading curtains menu. Please wait...')
+    elif choice==2:
+        print('Loading cushion covers menu. Please wait...')
+    elif choice==3:
+        print('Loading quilts menu. Please wait...')
+    elif choice==4:
+        print('Goodbye') # Display relevant messages depending on choice
+    print('\n')
