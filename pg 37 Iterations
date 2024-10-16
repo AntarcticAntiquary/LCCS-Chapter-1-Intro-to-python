@@ -1,0 +1,61 @@
+# Author='Daniel Lewis'
+# Telos='Classwork/Homework'
+# Topic='for loops'
+# Identifier='Tasks pg 37'
+# Date=16-10-24
+
+# Task 1
+# type = 'for' or 'while
+def Task1(type):
+    print('A program to print the numbers from 1 to 10')
+    if type=='for':
+        print('Using a for loop')
+        for d in range(1,11): # For loop (goes up to but does not reach 11)
+            print(d,end=' ')
+    elif type=='while':
+        print('Using a while loop')
+        counter=1
+        while counter<=10: #while loop
+            print(counter,end=' ')
+            counter+=1
+    else: # If invalid type, display error message
+        print('Please enter \'for\' or \'while\' inside the brackets to run the task')
+        
+# Task 2
+def Task2(num):
+    print('Counting odd numbers...')
+    for e in range(1,num,2): # Step of two will only give odd numbers
+        print(e,end=' ')
+        
+# Task 3
+def Task3(sentence): 
+    vNum=0 # vNum = vowel number
+    sentence=sentence.lower() # Convert to lowercase
+    print('Counting vowels...')
+    vowels=['a','e','i','o','u']
+    for f in range(len(sentence)): # Check every element to see if it is a vowel
+        if sentence[f] in vowels:
+            vNum+=1 # if it is a vowel, increment vowel number
+    print('There are',vNum,'vowels') # Print total
+    
+# Task 4
+def Task4(sentence):
+    print('Reversing sentence...')
+    sentence=list(sentence) # Convert to list
+    newSentence=[] # Output (reversed sentence)
+    for g in range(len(sentence),0,-1): # Steps backwards, adding to the new sentence each time
+        newSentence.append(sentence[g-1])
+    for h in range(len(newSentence)): # Prints each element of newSentence, with no gap
+        print(newSentence[h],end='')
+    
+# Task 5
+def Task5(sentence,c):
+    if len(c)==1: # If c is valid
+        cNum=0 # cNum = number of times c occurs
+        print('Counting occurences of',c,'in sentence...')
+        for i in range(len(sentence)):
+            if sentence[i]==c:
+                cNum+=1 # Find c
+        print(c,'occurs',cNum,'times') # Print result
+    else:
+        print('Please enter a correct search argument')
