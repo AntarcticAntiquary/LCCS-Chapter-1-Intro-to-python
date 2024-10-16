@@ -47,7 +47,13 @@ def Task4(sentence):
         newSentence.append(sentence[g-1])
     for h in range(len(newSentence)): # Prints each element of newSentence, with no gap
         print(newSentence[h],end='')
-    
+
+# Task 4 without lists
+def Task4andahalf(sentence):
+    print('Reversing sentence...')
+    for j in range(len(sentence),0,-1):
+        print(sentence[j-1],end='')
+
 # Task 5
 def Task5(sentence,c):
     if len(c)==1: # If c is valid
