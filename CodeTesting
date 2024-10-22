@@ -118,3 +118,27 @@ def runV2():
 # 10   # negative       # -2         # invalid value   # invalid value    # Y
 ##################################################################################
 ##################################################################################
+
+
+
+# Author='Daniel Lewis'
+# Telos='Classwork'
+# Topic='Testing'
+# Identifier='pg 46 2-3'
+# Date=22-10-2024
+
+def TestCase1():
+    payType=input('Do you want to pay using cash, card or coupon?')
+    if payType=='cash':
+        print('Please insert cash')
+    elif payType=='card':
+        print('Insert card into machine')
+    else:
+        print('Coupons are only accepted at customer service')
+        
+def TestCase2():
+    counter=0
+    while counter<7:
+        print(counter)
+        counter+=1
+    print('I\'m glad that loop is finished')
