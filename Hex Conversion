@@ -1,0 +1,26 @@
+def convertToHex(n):
+    w=[]
+    g=True
+    while g:
+        c=n//16
+        r=n%16
+        w.append(r)
+        if c==0:
+            break
+        n=c
+    for i in range(len(w)-1,-1,-1):
+        f=w[i]
+        if f==10:
+            f='A'
+        elif f==11:
+            f='B'
+        elif f==12:
+            f='C'
+        elif f==13:
+            f='D'
+        elif f==14:
+            f='E'
+        elif f==15:
+            f='F'
+
+convertToHex(301)
