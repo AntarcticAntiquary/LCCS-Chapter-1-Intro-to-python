@@ -1,19 +1,62 @@
-n=input(':')
-l=str(n)
-m=list(l)
-b=0
-count=0
-go=True
-while go==True:
-    for i in range(len(m)-1,-1,-1):
-        if m[i]=='1':
-            t=(2**count)
-            count+=1
-            b+=t
-        elif m[i]!='0':
+def convertToHex(n):
+    w=[]
+    g=True
+    while g:
+        s=str(n)
+        if not s.isdigit():
             print('Enter a valid value!')
-            go=False
+            n=input(':')
+        c=n//16
+        r=n%16
+        w.append(r)
+        if c==0:
             break
-    if go==True:
-        print(b)
-        go=False
+        n=c
+    for i in range(len(w)-1,-1,-1):
+        f=w[i]
+        if f==10:
+            f='A'
+        elif f==11:
+            f='B'
+        elif f==12:
+            f='C'
+        elif f==13:
+            f='D'
+        elif f==14:
+            f='E'
+        elif f==15:
+            f='F'
+        print(f,end='')
+    print('\n')
+
+convertToHex(301)
+
+def convertToDec(n):
+    l=str(n)
+    m=list(l)
+    b=0
+    count=0
+    go=True
+    while go==True:
+        for i in range(len(m)-1,-1,-1):
+            if m[i]=='A':
+                a=10
+            elif m[i]=='B':
+                a=11
+            elif m[i]=='C':
+                a=12
+            elif m[i]=='D':
+                a=13
+            elif m[i]=='E':
+                a=14
+            elif m[i]=='F':
+                a=15
+            else:
+                a=int(m[i])
+            b+=a*(16**count)
+            count+=1
+        if go==True:
+            print(b)
+            go=False
+            
+convertToDec('12C4')
