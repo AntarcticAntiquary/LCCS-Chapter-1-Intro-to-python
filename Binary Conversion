@@ -88,27 +88,17 @@ def hextobin(n):
     
 hextobin('A1')
 
-n=input(';')
-string=str(n)
-#value=list(string)
-hexes=['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F']
-binaries=['0000','0001','0010','0011','0100','0101','0110','0111','1000','1001','1010','1011','1100','1101','1110','1111']
-#output=value
-bit=''
-string=('0'*((len(string))%4))+string
-print(string)
-for i in range(len(string),-4,-4):
-    print(string[i-1:i-3])
-#     print(value)
-#     for i in range(len(value)-1,-1,-4):
-#         print(output)
-#         for k in range(4):
-#             bit+=value[i-k]
-#         j=binaries.index(bit)
-#         output[i]=bit
-# #         if i==0:
-# #             j=binaries.index
-# #         else:
-#     print(output)
-    
-#bintohex('100111')
+def bintohex(n):
+    string=str(n)
+    hexes=['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F']
+    binaries=['0000','0001','0010','0011','0100','0101','0110','0111','1000','1001','1010','1011','1100','1101','1110','1111']
+    output=''
+    bit=''
+    string=('0'*((len(string))%4))+string
+    for i in range(len(string),0,-4):
+        bit=string[i-4:i]
+        j=binaries.index(bit)
+        output=hexes[j]+output
+    print(output)
+
+bintohex(1000101)
